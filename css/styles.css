@@ -1,0 +1,96 @@
+
+/*Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Source+Sans+Pro&display=swap');
+
+*, *::before, *::after {
+     box-sizing: border-box;
+     font-family: 'Josefin Sans', sans-serif;     
+     font-weight: normal;
+}    
+body {
+     background: linear-gradient(to left, #bdc7d6, #c56868b6 , 
+     #92b96eb6);
+     
+     background-size: 400% 400%;
+     animation: gradient 10s ease infinite;
+     padding: 0;
+     margin: 0;
+ }
+ @keyframes gradient {
+     0% {
+         background-position: 0% 50%;
+     }
+     50% {
+         background-position: 100% 0%;
+     }
+     100% {
+         background-position: 0% 100%;
+     }
+ }
+.grid {
+     display: grid;
+     justify-content: center;
+     align-content:center;
+     min-height: 90vh;
+     grid-template-columns: repeat(4, 100px);
+     grid-template-rows: minmax(120px, auto) repeat(5, 100px);  
+}
+.grid > button {
+     cursor: pointer;
+     font-size: 1.5rem;
+     outline: none;
+     border: 1px solid rgb(180, 180, 180);
+     background-color: rgb(115, 125, 158);
+     
+     box-shadow: 0 4px rgb(106, 114, 126);
+}
+
+.grid > button:hover {
+     background-color: rgb(103, 116, 136) 
+}
+
+.grid > button:active {
+    background-color:rgb(84, 92, 119); 
+    box-shadow: 0 2px rgb(75, 75, 75);
+    transform: translateY(2px);
+}
+.grid > button#clear {
+     background-color: rgb(204, 99, 99, 0.932)
+}
+.grid > button#clear:hover {
+     background-color: rgb(177, 96, 96);
+     
+}
+.grid > button#clear:active{
+     background-color: rgb(138, 73, 73);
+}
+
+.output {
+     grid-column: 1/-1;
+     background-color: rgba(0,0,0,.3);
+     display: flex;
+     align-items: flex-end;
+     justify-content: space-around;
+     flex-direction: column;
+     padding: 10px;
+     word-wrap: break-word;
+     word-break: break-all;
+}
+
+.output .pre-oper {
+     color: rgb(255,255,255,.75);
+     font-size: 1.5rem;
+}
+.output .curr-oper {
+     color: white;
+     font-size: 2.5rem;
+}
+/*.whole {
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: 15px;
+     width: fit-content;
+     height: fit-content;
+     background-color:rgba(103, 116, 136, .75);
+     box-shadow: 0 5px rgb(103, 116, 136)
+}*/
